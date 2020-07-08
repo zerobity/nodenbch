@@ -1,0 +1,41 @@
+{{> header }}
+<div class="container-fluid">
+  <div class="row">
+    {{> leftmenu }}
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="container">
+        <br>
+        <a class="btn btn-success" href="/personas/create" role="button" style="float: right;">Nuevo</a>
+        <h3>{{title}}</h3>
+        <br>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">DNI</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Email</th>
+              <th scope="col">Fecha Nacimiento</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each people}}
+              <tr>
+                <th scope="row">{{this.PEINDO}}</th>
+                <td>{{this.PENYAP}}</td>
+                <td>{{this.PEMAIL}}</td>
+                <td>{{this.PEFNAC}}</td>
+                <td>{{this.PEESTA}}</td>
+                <td>
+                  <a class="btn btn-primary" href="/personas/edit/{{this.PEINDO}}" role="button">Ver</a>
+                </td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+
+      </div>
+    </main>
+  </div>
+</div>

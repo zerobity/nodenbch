@@ -1,0 +1,33 @@
+{{> header }}
+<div class="container-fluid">
+  <div class="row">
+    {{> leftmenu }}
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="container">
+        <br>
+        <h3>{{title}}</h3>
+        <br>
+        <form action="/personas" method="POST" class="mb-4">
+          <div class="form-group">
+            <label for="name">DNI</label>
+            <input type="number" name="PEINDO" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" name="PENYAP" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="PEMAIL" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="email">Fecha Nacimiento</label>
+            <input type="date" name="PEFNAC" class="form-control">
+          </div>
+          <br>
+          <button type="submit" class="btn btn-primary">Crear Persona</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</div> 
